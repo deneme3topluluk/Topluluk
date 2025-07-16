@@ -91,6 +91,27 @@
 	</section>
 
 </section>
+<style>
+	html, body {
+		margin: 0;
+		height: 100%;
+		overflow: hidden;
+	}
+
+	#wrapper {
+		overflow-y: scroll;
+		scroll-snap-type: y mandatory;
+		height: 100vh;
+	}
+
+	.snap-section {
+		scroll-snap-align: start;
+		height: 100vh;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
+</style>
 
 				<!-- Footer -->
 					<footer id="footer">
