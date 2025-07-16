@@ -30,14 +30,26 @@
 	<div class="inner" style="padding: 20px; text-align: center;">
 		<h2 style="margin-bottom: 20px;">Menu</h2>
 		<ul style="list-style: none; padding: 0; margin: 0;">
-			<li style="margin-bottom: 15px;"><a href="b">Eğitim Sitemiz</a></li>
-			<li style="margin-bottom: 15px;"><a href="kadromuz.html">Kadromuz</a></li>
-			<li style="margin-bottom: 15px;"><a href="birim.html">Birimlerimiz</a></li>
-			<li style="margin-bottom: 15px;"><a href="a">Kendi Birimini Kur</a></li>
-			<li style="margin-bottom: 15px;"><a href="hakkında.html">Hakkında</a></li>
+			<li><a href="b" style="display: inline-block; padding: 8px 16px; border-radius: 5px; text-decoration: none; color: white; transition: 0.3s;">Eğitim Sitemiz</a></li>
+			<li><a href="kadromuz.html" style="display: inline-block; padding: 8px 16px; border-radius: 5px; text-decoration: none; color: white; transition: 0.3s;">Kadromuz</a></li>
+			<li><a href="birim.html" style="display: inline-block; padding: 8px 16px; border-radius: 5px; text-decoration: none; color: white; transition: 0.3s;">Birimlerimiz</a></li>
+			<li><a href="a" style="display: inline-block; padding: 8px 16px; border-radius: 5px; text-decoration: none; color: white; transition: 0.3s;">Kendi Birimini Kur</a></li>
+			<li><a href="hakkında.html" style="display: inline-block; padding: 8px 16px; border-radius: 5px; text-decoration: none; color: white; transition: 0.3s;">Hakkında</a></li>
 		</ul>
 		<p style="font-size: 0.8em; margin-top: 20px;">İletişim: topluluk@ornekmail.com</p>
-		<a href="#" class="close" style="display: inline-block; margin-top: 20px;">Close</a>
+		<a href="#" class="close">Close</a>
+
+		<script>
+			// Basit hover efekti
+			document.querySelectorAll('#menu a').forEach(function(el) {
+				el.addEventListener('mouseenter', function() {
+					this.style.background = 'rgba(255, 255, 255, 0.1)';
+				});
+				el.addEventListener('mouseleave', function() {
+					this.style.background = 'transparent';
+				});
+			});
+		</script>
 	</div>
 </nav>
 
