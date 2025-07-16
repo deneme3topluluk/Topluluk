@@ -1,1 +1,22 @@
+html, body {
+	margin: 0;
+	padding: 0;
+	height: 100%;
+	overflow: hidden;
+}
 
+.scroll-container {
+	height: 100vh;
+	overflow-y: scroll;
+	scroll-snap-type: y mandatory;
+}
+
+.panel {
+	height: 100vh;
+	scroll-snap-align: start;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	font-size: 2em;
+	border-bottom: 1px solid #ccc;
+}
