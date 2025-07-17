@@ -1,22 +1,26 @@
-html, body {
-	margin: 0;
-	padding: 0;
-	height: 100%;
-	overflow: hidden;
-}
 
+}
 .scroll-container {
-	height: 100vh;
-	overflow-y: scroll;
 	scroll-snap-type: y mandatory;
+	overflow-y: scroll;
+	height: 100vh;
 }
 
 .panel {
-	height: 100vh;
 	scroll-snap-align: start;
+	min-height: 100vh;
 	display: flex;
-	align-items: center;
 	justify-content: center;
-	font-size: 2em;
-	border-bottom: 1px solid #ccc;
+	align-items: center;
+	text-align: center;
+	flex-direction: column;
+	padding: 2em;
+}
+
+.panel:nth-child(odd) {
+	background: #f0f0f0;
+}
+
+.panel:nth-child(even) {
+	background: #e0e0e0;
 }
