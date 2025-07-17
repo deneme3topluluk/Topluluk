@@ -1,26 +1,2 @@
 
-}
-.scroll-container {
-	scroll-snap-type: y mandatory;
-	overflow-y: scroll;
-	height: 100vh;
-}
 
-.panel {
-	scroll-snap-align: start;
-	min-height: 100vh;
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	text-align: center;
-	flex-direction: column;
-	padding: 2em;
-}
-
-.panel:nth-child(odd) {
-	background: #f0f0f0;
-}
-
-.panel:nth-child(even) {
-	background: #e0e0e0;
-}
