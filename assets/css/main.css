@@ -4698,3 +4698,7 @@ h1 {
 	background-repeat: no-repeat;
 	color: white;
 }
+#intro {
+	background-image: url("images/bg.jpg");
+	/* diğer ayarlar aynı kalabilir */
+}
