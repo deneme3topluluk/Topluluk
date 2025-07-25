@@ -23,9 +23,9 @@
   margin-top: 15px; /* ← Buraya istediğin kadar px ver, örneğin 30px */
   margin-bottom: 10px;
 }
+<style>
   .top-header {
     display: flex;
-    flex-wrap: wrap;
     align-items: center;
     justify-content: space-between;
     padding: 12px 20px;
@@ -40,45 +40,45 @@
     height: 40px;
   }
 
-  .top-header .menu {
-    flex: 1 1 100%;
-    text-align: center;
-    margin-top: 10px;
+  .menu {
+    display: flex;
+    gap: 20px;
   }
 
-  .top-header .menu a {
-    margin: 0 12px;
+  .menu a {
     text-decoration: none;
     color: #333;
     font-weight: 600;
   }
 
-  .top-header .contact {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    flex-wrap: wrap;
-    justify-content: flex-end;
+  .hamburger {
+    display: none;
+    font-size: 24px;
+    background: none;
+    border: none;
+    cursor: pointer;
   }
 
-  .top-header .contact a {
-    color: #333;
-    font-size: 18px;
-    text-decoration: none;
-  }
-
-  @media (min-width: 768px) {
-    .top-header {
-      flex-wrap: nowrap;
+  @media (max-width: 768px) {
+    .menu {
+      display: none;
+      flex-direction: column;
+      position: absolute;
+      top: 60px;
+      right: 20px;
+      background-color: white;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+      padding: 10px;
+      border-radius: 8px;
+      z-index: 999;
     }
 
-    .top-header .menu {
-      flex: 1;
-      margin-top: 0;
+    .menu.active {
+      display: flex;
     }
 
-    .top-header .contact {
-      justify-content: flex-end;
+    .hamburger {
+      display: block;
     }
   }
 </style>
