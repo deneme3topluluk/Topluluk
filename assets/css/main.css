@@ -4906,3 +4906,20 @@ ul {
   font-size: 14px;
   color: #878787;
 }
+<style>
+  #logo {
+    width: 20vw;
+    max-width: 200px;
+    height: auto;
+    display: block;
+    margin: 10px auto;
+  }
+
+  /* Mobil ekranlarda özel boyut */
+  @media (max-width: 768px) {
+    #logo {
+      width: 50vw;
+      max-width: 160px;
+    }
+  }
+</style>
