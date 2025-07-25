@@ -16,6 +16,7 @@
 	<body class="is-preload">
 		<!-- Mobil Uyumlu Header -->
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
 <style>
   .top-header {
     display: flex;
@@ -55,44 +56,44 @@
     justify-content: flex-end;
   }
 
-  .top-er .contact a {
+  .top-header .contact a {
     color: #333;
     font-size: 18px;
     text-decoration: none;
   }
 
   @media (min-width: 768px) {
-    .top-er {
+    .top-header {
       flex-wrap: nowrap;
     }
 
-    .top-er .menu {
+    .top-header .menu {
       flex: 1;
       margin-top: 0;
     }
 
-    .top-er .contact {
+    .top-header .contact {
       justify-content: flex-end;
     }
   }
- <style>
-    #logo {
-      width: 20vw;
-      max-width: 200px;
-      height: auto;
-      display: block;
-      margin: 10px auto;
-    }
 
-    /* Mobil uyum: 768 pikselden küçük ekranlarda logoyu büyüt */
-    @media (max-width: 768px) {
-      #logo {
-        width: 60vw;
-        max-width: 220px;
-      }
+  /* Logo responsive ayarı */
+  #logo {
+    width: 20vw;
+    max-width: 200px;
+    height: auto;
+    display: block;
+    margin: 10px auto;
+  }
+
+  @media (max-width: 768px) {
+    #logo {
+      width: 60vw;
+      max-width: 220px;
     }
-  </style>
-</head>
+  }
+</style>
+
 
 		<!-- Wrapper -->
 			<div id="wrapper" class="fade-in">
