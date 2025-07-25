@@ -66,19 +66,20 @@
   }
 </style>
 
-<header class="mobile-header">
+<header class="mobile-header" style="display: flex; justify-content: space-between; align-items: center; padding: 12px 20px; background-color: white; box-shadow: 0 2px 8px rgba(0,0,0,0.1); position: sticky; top: 0; z-index: 1000;">
   <div class="logo">
-    <img src="assets/images/bg.png" alt="Enginar Logo" />
+    <img src="assets/images/bg.png" alt="Enginar Logo" style="height: 50px; margin-top: 10px;" />
   </div>
-  <div class="hamburger" onclick="toggleMenu()">
+  <div class="hamburger" onclick="toggleMenu()" style="font-size: 32px; cursor: pointer;">
     &#9776;
   </div>
-  <nav class="mobile-nav" id="mobileNav">
-    <a href="faaliyetlerimiz.html">Faaliyetlerimiz</a>
-    <a href="kadromuz.html">Kadromuz</a>
-    <a href="kendibiriminikur.html">Kendi Birimini Kur</a>
+  <nav id="mobileNav" style="display: none; position: absolute; top: 65px; right: 20px; background: white; box-shadow: 0 2px 10px rgba(0,0,0,0.2); padding: 12px; z-index: 999; text-align: right;">
+    <a href="faaliyetlerimiz.html" style="display: block; padding: 6px 0; color: #333; text-decoration: none;">Faaliyetlerimiz</a>
+    <a href="kadromuz.html" style="display: block; padding: 6px 0; color: #333; text-decoration: none;">Kadromuz</a>
+    <a href="kendibiriminikur.html" style="display: block; padding: 6px 0; color: #333; text-decoration: none;">Kendi Birimini Kur</a>
   </nav>
 </header>
+
 
 <script>
 function toggleMenu() {
@@ -152,6 +153,20 @@ function toggleMenu() {
 			<script src="assets/js/breakpoints.min.js"></script>
 			<script src="assets/js/util.js"></script>
 			<script src="assets/js/main.js"></script>
+						<script>
+  function toggleMenu() {
+    const nav = document.getElementById('mobileNav');
+    nav.style.display = (nav.style.display === 'block') ? 'none' : 'block';
+  }
+
+  document.addEventListener('click', function(e) {
+    const nav = document.getElementById('mobileNav');
+    const hamburger = document.querySelector('.hamburger');
+    if (!nav.contains(e.target) && !hamburger.contains(e.target)) {
+      nav.style.display = 'none';
+    }
+  });
+</script>
 
 	</body>
 	<body style="
