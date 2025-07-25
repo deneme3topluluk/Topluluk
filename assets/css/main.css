@@ -4923,3 +4923,21 @@ ul {
     }
   }
 </style>
+.menu {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 16px; /* Masaüstü için */
+}
+
+/* Mobil görünüm */
+@media (max-width: 768px) {
+  .menu {
+    gap: 6px; /* Mobilde boşlukları daralt */
+  }
+
+  .menu a {
+    font-size: 14px; /* İstersen yazı boyutunu da küçültebilirsin */
+    padding: 4px 6px;
+  }
+}
