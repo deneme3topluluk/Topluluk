@@ -256,3 +256,10 @@
 		}
 
 })(jQuery);
+
+<script>
+  function toggleMenu() {
+    var nav = document.getElementById("mobileNav");
+    nav.classList.toggle("open");
+  }
+</script>
