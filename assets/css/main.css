@@ -4915,23 +4915,34 @@ ul {
     margin: 10px auto;
   }
 
-.menu {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 16px; /* Masaüstü için */
-}
-
-@media (max-width: 768px) {
+<style>
   .menu {
-    gap: 4px; /* Bağlantılar arası mesafe sıkılaştı */
-    justify-content: center; /* Ortalıyoruz */
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    padding: 0;
+    gap: 10px;
   }
 
   .menu a {
-    font-size: 13px; /* Yazı daha küçük */
-    padding: 2px 4px; /* İç boşluk azaltıldı */
-    margin: 0 2px; /* Dış boşluk çok az */
+    text-decoration: none;
+    color: #333;
+    font-size: 16px;
+    font-weight: 600;
+    padding: 4px 8px;
   }
-}
 
+  @media (max-width: 768px) {
+    .menu {
+      gap: 4px; /* mobilde daha sıkı */
+    }
+
+    .menu a {
+      font-size: 13px;
+      padding: 2px 4px;
+      margin: 0;
+    }
+  }
+</style>
