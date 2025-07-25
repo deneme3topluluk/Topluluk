@@ -23,9 +23,9 @@
   margin-top: 15px; /* ← Buraya istediğin kadar px ver, örneğin 30px */
   margin-bottom: 10px;
 }
-<style>
   .top-header {
     display: flex;
+    flex-wrap: wrap;
     align-items: center;
     justify-content: space-between;
     padding: 12px 20px;
@@ -40,70 +40,62 @@
     height: 40px;
   }
 
-  .menu {
-    display: flex;
-    gap: 20px;
+  .top-header .menu {
+    flex: 1 1 100%;
+    text-align: center;
+    margin-top: 10px;
   }
 
-  .menu a {
+  .top-header .menu a {
+    margin: 0 12px;
     text-decoration: none;
     color: #333;
     font-weight: 600;
   }
 
-  .hamburger {
-    display: none;
-    font-size: 24px;
-    background: none;
-    border: none;
-    cursor: pointer;
+  .top-header .contact {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    flex-wrap: wrap;
+    justify-content: flex-end;
   }
 
-  @media (max-width: 768px) {
-    .menu {
-      display: none;
-      flex-direction: column;
-      position: absolute;
-      top: 60px;
-      right: 20px;
-      background-color: white;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-      padding: 10px;
-      border-radius: 8px;
-      z-index: 999;
+  .top-header .contact a {
+    color: #333;
+    font-size: 18px;
+    text-decoration: none;
+  }
+
+  @media (min-width: 768px) {
+    .top-header {
+      flex-wrap: nowrap;
     }
 
-    .menu.active {
-      display: flex;
+    .top-header .menu {
+      flex: 1;
+      margin-top: 0;
     }
 
-    .hamburger {
-      display: block;
+    .top-header .contact {
+      justify-content: flex-end;
     }
   }
 </style>
 
-<header class="top-header">
+<header class="mobile-header">
   <div class="logo">
-    <img src="assets/images/bg.png" alt="EnginAr Logo">
+    <img src="assets/images/bg.png" alt="Enginar Logo" />
   </div>
-
-  <!-- Hamburger Menü (Mobil İçin) -->
-  <input type="checkbox" id="menu-toggle" class="menu-toggle">
-  <label for="menu-toggle" class="hamburger">
-    <span></span>
-    <span></span>
-    <span></span>
-  </label>
-
-  <!-- Menü Linkleri -->
-  <div class="menu">
+  <div class="hamburger" onclick="toggleMenu()">
+    &#9776;
+  </div>
+  <nav class="mobile-nav" id="mobileNav">
     <a href="faaliyetlerimiz.html">Faaliyetlerimiz</a>
     <a href="kadromuz.html">Kadromuz</a>
     <a href="kendibiriminikur.html">Kendi Birimini Kur</a>
-  </div>
+  </nav>
 </header>
-
 
 
 		<!-- Wrapper -->
