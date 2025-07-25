@@ -4991,10 +4991,7 @@ ul {
     right: 0;
   }
 
-  @media (min-width: 768px) {
-    .hamburger {
-      display: none;
-    }
+
 
     .mobile-nav {
       display: none !important;
