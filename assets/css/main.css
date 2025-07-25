@@ -4933,11 +4933,11 @@ ul {
 /* Mobil görünüm */
 @media (max-width: 768px) {
   .menu {
-    gap: 6px; /* Mobilde boşlukları daralt */
+    gap: 3px; /* Mobilde boşlukları daralt */
   }
 
   .menu a {
-    font-size: 14px; /* İstersen yazı boyutunu da küçültebilirsin */
+    font-size: 12px; /* İstersen yazı boyutunu da küçültebilirsin */
     padding: 4px 6px;
   }
 }
