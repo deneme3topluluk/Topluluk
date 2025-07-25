@@ -1,128 +1,77 @@
-<!DOCTYPE HTML>
-<html>
-	<head>
-		<title>EnginAr™</title>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-		<style>
-			body {
-				margin: 0;
-				font-family: 'Roboto', sans-serif;
-				background-image: url('assets/images/bg.jpg');
-				background-size: cover;
-				background-position: center;
-				background-repeat: no-repeat;
-				background-attachment: fixed;
-			}
+<style>
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
 
-			.top-header {
-				display: flex;
-				align-items: center;
-				justify-content: space-between;
-				padding: 12px 20px;
-				background-color: white;
-				box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-				position: sticky;
-				top: 0;
-				z-index: 1000;
-			}
+  header {
+    background: #fff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    position: sticky;
+    top: 0;
+    z-index: 999;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  }
 
-			.logo img {
-				height: 40px;
-			}
+  .logo img {
+    height: 45px;
+  }
 
-			.menu {
-				display: flex;
-				gap: 20px;
-			}
+  nav {
+    display: flex;
+    gap: 25px;
+  }
 
-			.menu a {
-				text-decoration: none;
-				color: #333;
-				font-weight: 600;
-			}
+  nav a {
+    text-decoration: none;
+    color: #222;
+    font-weight: 600;
+    font-size: 16px;
+  }
 
-			.burger {
-				display: none;
-				font-size: 24px;
-				cursor: pointer;
-			}
+  .hamburger {
+    display: none;
+    font-size: 26px;
+    cursor: pointer;
+  }
 
-			@media (max-width: 768px) {
-				.menu {
-					display: none;
-					flex-direction: column;
-					width: 100%;
-					margin-top: 10px;
-				}
+  @media (max-width: 768px) {
+    nav {
+      display: none;
+      flex-direction: column;
+      position: absolute;
+      top: 70px;
+      right: 20px;
+      background: white;
+      border: 1px solid #ccc;
+      padding: 10px 15px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    }
 
-				.menu.show {
-					display: flex;
-				}
+    nav.active {
+      display: flex;
+    }
 
-				.burger {
-					display: block;
-				}
-			}
-		</style>
-	</head>
-	<body>
-		<header class="top-header">
-			<div class="logo">
-				<img src="assets/images/logo.png" alt="EnginAr Logo">
-			</div>
-			<nav class="menu" id="navMenu">
-				<a href="faaliyetlerimiz.html">Faaliyetlerimiz</a>
-				<a href="kadromuz.html">Kadromuz</a>
-				<a href="kendibiriminikur.html">Kendi Birimini Kur</a>
-			</nav>
-			<div class="burger" onclick="toggleMenu()">
-				&#9776;
-			</div>
-		</header>
+    .hamburger {
+      display: block;
+    }
+  }
+</style>
 
-		<!-- Main Content -->
-		<div id="wrapper" class="fade-in">
-			<header id="header">
-				<a href="index.html" class="logo">EnginAr™</a>
-			</header>
-
-			<div id="main">
-				<article class="post featured">
-					<header class="major">
-						<span class="date">2025-2026</span>
-						<h2>Çok Yakında<br>Buradayız!</h2>
-						<p>Startuplar, yenilikçi projeler, ilham veren etkinlikler, sertifikalı eğitimler ve daha fazlası...</p>
-					</header>
-					<ul class="actions special">
-						<li><a href="https://docs.google.com/forms/d/e/1FAIpQLSepPNpFs1o_xrMkErSlJDvzN2asG6ATVIqAGhIONR0tcjMnCA/viewform?usp=dialog" class="button large">Ön Kayıt</a></li>
-					</ul>
-				</article>
-			</div>
-		</div>
-
-		<!-- Footer -->
-		<footer style="background-color: #f0f0f0; padding: 20px; text-align: left; font-size: 14px; color: #333;">
-			<p style="margin: 0 0 7px 0;"><strong>© 2025 EnginAr™ </strong></p>
-			<p style="margin: 0 0 7px 0;">
-				<a href="bizkimiz.html" style="margin: 0 5px; text-decoration: none; color: #333;">Biz Kimiz</a> |
-				<a href="kadromuz.html" style="margin: 0 5px; text-decoration: none; color: #333;">Kadromuz</a> |
-				<a href="faaliyettakvimimiz.html" style="margin: 0 5px; text-decoration: none; color: #333;">Faaliyet Takvimimiz</a>
-			</p>
-			<p style="margin: 5px 0;">
-				<strong>İletişim:</strong> <a href="mailto:enginartechnology@gmail.com" style="color: #333; text-decoration: none;">enginartechnology@gmail.com</a>
-			</p>
-			<p style="margin: 0;">
-				<a href="#" target="_blank" style="margin: 0 10px; color: #333; font-size: 24px;"><i class="fab fa-instagram"></i></a>
-				<a href="#" target="_blank" style="margin: 0 10px; color: #333; font-size: 24px;"><i class="fab fa-linkedin"></i></a>
-			</p>
-		</footer>
-
-		<script>
-			function toggleMenu() {
-				document.getElementById("navMenu").classList.toggle("show");
-			}
-		</script>
-	</body>
-</html>
+<header>
+  <div class="logo">
+    <img src="assets/images/logo.png" alt="Enginar Logo">
+  </div>
+  <div class="hamburger" onclick="document.querySelector('nav').classList.toggle('active')">
+    ☰
+  </div>
+  <nav>
+    <a href="faaliyetlerimiz.html">Faaliyetlerimiz</a>
+    <a href="kadromuz.html">Kadromuz</a>
+    <a href="kendibiriminikur.html">Birimini Kur</a>
+  </nav>
+</header>
